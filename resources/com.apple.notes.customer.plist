@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 
+        Logging Documentation:
+        https://confluence.sd.apple.com/display/allOSSystemsInternals/Logging+Preferences
+     -->
+
+    <!-- 
+        Debug logs are enabled; however, they're only stored in the memory ring buffer.
+
+        See:
+        <rdar://problem/57770076> Make default sysdiagnoses more actionable in Notes
+     -->
+    <key>DEFAULT-OPTIONS</key>
+    <dict>
+        <key>Level</key>
+        <dict>
+            <key>Enable</key>
+            <string>Debug</string>
+            <key>Persist</key>
+            <string>Inherit</string>
+        </dict>
+        <key>TTL</key>
+        <dict>
+            <key>Default</key>
+            <integer>14</integer>
+        </dict>
+        <key>Privacy-Enable-Level</key>
+        <string>Private</string>
+        <key>Enable-Oversize-Messages</key>
+        <true/>
+    </dict>
+
+    <!--
+        Disables analytics logging on customer devices by default.
+        Because of the sensitivity to this data, we need to use a profile for this.
+
+        See:
+        <rdar://problem/52485632> Logging Analytics events on Customer Erase Install builds when we shouldn't log events at the public level
+    -->
+    <key>Analytics</key>
+    <dict>
+        <key>Level</key>
+        <dict>
+            <key>Enable</key>
+            <string>Inherit</string>
+            <key>Persist</key>
+            <string>Inherit</string>
+        </dict>
+    </dict>
+</dict>
+</plist>
