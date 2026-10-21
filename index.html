@@ -678,27 +678,28 @@
     justify-content: center;
     gap: 0;
     margin-bottom: 4rem;
-    border: 1px solid rgba(201,168,76,0.25);
+    border: 2px solid var(--gold);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
   .tab-btn {
     font-family: 'Cinzel', serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(250,246,237,0.45);
+    color: var(--cream);
     background: transparent;
     border: none;
-    border-right: 1px solid rgba(201,168,76,0.25);
+    border-right: 2px solid var(--gold);
     padding: 0.9rem 2rem;
     cursor: pointer;
     transition: all 0.3s;
   }
   .tab-btn:last-child { border-right: none; }
-  .tab-btn:hover { color: var(--gold); background: rgba(201,168,76,0.05); }
-  .tab-btn.active { color: var(--green-deep); background: var(--gold); }
+  .tab-btn:hover { color: var(--gold-light); background: rgba(201,168,76,0.12); }
+  .tab-btn.active { color: var(--green-deep); background: var(--gold); font-weight: 700; }
 
   /* ── DURATION NOTE ── */
   .duration-note {
@@ -752,7 +753,7 @@
   }
   @media (max-width: 900px) {
     .plans-grid-5 { grid-template-columns: 1fr; }
-    .tab-btn { padding: 0.8rem 1.2rem; font-size: 0.58rem; }
+    .tab-btn { padding: 0.9rem 1rem; font-size: 0.75rem; }
     .duration-options { flex-direction: column; gap: 1.5rem; }
   }
 
