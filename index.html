@@ -1160,12 +1160,6 @@
       </p>
     </div>
 
-    <!-- TAB TOGGLE -->
-    <div class="tab-toggle reveal">
-      <button class="tab-btn active" onclick="showTab('monthly')">Monthly Plans</button>
-      <button class="tab-btn" onclick="showTab('annual')">Hours for Days</button>
-    </div>
-
     <!-- MONTHLY PLANS -->
     <div id="tab-monthly" class="tab-content">
       <div class="plans-grid-5">
@@ -1269,66 +1263,6 @@
             <div class="commit-note">added to monthly price</div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- PAY-IN-FULL PLANS -->
-    <div id="tab-annual" class="tab-content" style="display:none;">
-      <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:rgba(250,246,237,0.5);margin-bottom:3rem;">
-        Schedule unpredictable? Buy a block of hours and use them whenever you like.
-      </p>
-      <div class="plans-grid" style="grid-template-columns:repeat(3,1fr);">
-
-        <div class="plan-card">
-          <div class="plan-name">Weekend Warrior</div>
-          <div class="plan-tagline">Peak hours, your schedule</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">2,000</span></div>
-          <div class="price-period">one-time payment</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>104 peak hours</li>
-            <li>= $18.75 / hour</li>
-            <li>Use at your own pace</li>
-            <li>No expiry on hours</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-        <div class="plan-card featured">
-          <div class="plan-badge">Best Value</div>
-          <div class="plan-name">Ranger Rick</div>
-          <div class="plan-tagline">The flexible all-rounder</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">1,600</span></div>
-          <div class="price-period">one-time payment</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>150 hours total</li>
-            <li>48 peak hours included</li>
-            <li>= $10.66 / hour</li>
-            <li>No expiry on hours</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-        <div class="plan-card">
-          <div class="plan-name">I Work To Golf</div>
-          <div class="plan-tagline">Maximum hours, maximum value</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">3,000</span></div>
-          <div class="price-period">one-time payment</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>300 hours total</li>
-            <li>96 peak hours included</li>
-            <li>= $10 / hour</li>
-            <li>No expiry on hours</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-      </div>
-      <div class="duration-note reveal" style="margin-top:3rem;">
-        <div class="duration-title">Stock Up For The Year</div>
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:rgba(250,246,237,0.5);text-align:center;margin-top:0.5rem;">Hours never expire. Play whenever it suits your schedule.</p>
       </div>
     </div>
 
@@ -1460,16 +1394,6 @@
 </footer>
 
 <script>
-  // Tab switching
-  function showTab(name) {
-    ['monthly','annual'].forEach(t => {
-      document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
-    });
-    document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', ['monthly','annual'][i] === name);
-    });
-  }
-
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
