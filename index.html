@@ -1164,7 +1164,6 @@
     <div class="tab-toggle reveal">
       <button class="tab-btn active" onclick="showTab('monthly')">Monthly Plans</button>
       <button class="tab-btn" onclick="showTab('annual')">Hours for Days</button>
-      <button class="tab-btn" onclick="showTab('casual')">Member At Your Own Pace</button>
     </div>
 
     <!-- MONTHLY PLANS -->
@@ -1333,69 +1332,6 @@
       </div>
     </div>
 
-    <!-- CASUAL ACCESS PLANS -->
-    <div id="tab-casual" class="tab-content" style="display:none;">
-      <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:rgba(250,246,237,0.6);margin-bottom:0.75rem;">
-        Become a member without feeling you have to "use your hours" every month.
-      </p>
-      <p style="text-align:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:rgba(250,246,237,0.4);margin-bottom:3.5rem;">
-        Pay a yearly fee, then book time at a flat per-hour rate whenever you want — up to your monthly limit.
-      </p>
-      <div class="plans-grid" style="grid-template-columns:repeat(3,1fr);">
-
-        <div class="plan-card">
-          <div class="plan-name">Occasional</div>
-          <div class="plan-tagline">Dip in when the mood strikes</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">200</span></div>
-          <div class="price-period">per year</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>Up to 20 hrs / month</li>
-            <li>$23 / hour — book as you go</li>
-            <li>No monthly commitment</li>
-            <li>Full course library access</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-        <div class="plan-card featured">
-          <div class="plan-badge">Most Flexible</div>
-          <div class="plan-name">Regular</div>
-          <div class="plan-tagline">Your game, your timing</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">500</span></div>
-          <div class="price-period">per year</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>Up to 20 hrs / month</li>
-            <li>$20 / hour — book as you go</li>
-            <li>No monthly commitment</li>
-            <li>Full course library access</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-        <div class="plan-card">
-          <div class="plan-name">Serious Casual</div>
-          <div class="plan-tagline">High volume, zero pressure</div>
-          <div class="plan-price"><span class="price-currency">$</span><span class="price-amount">1,000</span></div>
-          <div class="price-period">per year</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>Up to 40 hrs / month</li>
-            <li>$16 / hour — book as you go</li>
-            <li>No monthly commitment</li>
-            <li>Full course library access</li>
-          </ul>
-          <a href="#contact" class="plan-cta">Enquire Now</a>
-        </div>
-
-      </div>
-      <div class="duration-note reveal" style="margin-top:3rem;">
-        <div class="duration-title">How It Works</div>
-        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:rgba(250,246,237,0.5);text-align:center;margin-top:0.5rem;">Pay the annual fee once. Book hours at the flat rate whenever you like — no pressure to hit a monthly quota.</p>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -1526,11 +1462,11 @@
 <script>
   // Tab switching
   function showTab(name) {
-    ['monthly','annual','casual'].forEach(t => {
+    ['monthly','annual'].forEach(t => {
       document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
     });
     document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-      btn.classList.toggle('active', ['monthly','annual','casual'][i] === name);
+      btn.classList.toggle('active', ['monthly','annual'][i] === name);
     });
   }
 
