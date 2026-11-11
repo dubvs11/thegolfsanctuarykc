@@ -759,6 +759,20 @@
     font-family: 'Cormorant Garamond', serif; font-style: italic;
     font-size: 0.95rem; color: rgba(250,246,237,0.6);
   }
+  .commit-sub {
+    font-family: 'Cormorant Garamond', serif; font-style: italic;
+    font-size: 0.9rem; color: rgba(250,246,237,0.55); margin-top: -0.3rem;
+  }
+  .commit-tiers {
+    list-style: none; margin: 0.6rem 0 0; padding: 0.7rem 0 0; width: 100%;
+    border-top: 1px solid rgba(201,168,76,0.25);
+  }
+  .commit-tiers li {
+    display: flex; justify-content: space-between; gap: 0.5rem;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;
+    color: var(--cream); padding: 0.22rem 0.3rem;
+  }
+  .commit-tiers li span:last-child { color: var(--gold-light); font-weight: 500; }
   @media (max-width: 700px) {
     .commit-grid { grid-template-columns: 1fr; gap: 1.4rem; }
     .duration-note { padding: 2rem 1.2rem; }
@@ -1248,19 +1262,40 @@
         <div class="commit-grid">
           <div class="commit-box best">
             <div class="commit-badge">Best Value</div>
-            <div class="commit-term">12 Months</div>
-            <div class="commit-price">Base Price</div>
-            <div class="commit-note">Prices shown above</div>
+            <div class="commit-term">12-Month</div>
+            <div class="commit-sub">commitment</div>
+            <ul class="commit-tiers">
+              <li><span>Breakfast Baller</span><span>$100</span></li>
+              <li><span>Small Bucket</span><span>$150</span></li>
+              <li><span>Ranger Rick</span><span>$200</span></li>
+              <li><span>From the Tips</span><span>$250</span></li>
+              <li><span>Stick</span><span>$300</span></li>
+              <li><span>Midday Mulligan</span><span>$300</span></li>
+            </ul>
           </div>
           <div class="commit-box">
-            <div class="commit-term">8 Months</div>
-            <div class="commit-price">+ 25%</div>
-            <div class="commit-note">added to monthly price</div>
+            <div class="commit-term">8-Month</div>
+            <div class="commit-sub">commitment</div>
+            <ul class="commit-tiers">
+              <li><span>Breakfast Baller</span><span>$125</span></li>
+              <li><span>Small Bucket</span><span>$190</span></li>
+              <li><span>Ranger Rick</span><span>$250</span></li>
+              <li><span>From the Tips</span><span>$315</span></li>
+              <li><span>Stick</span><span>$375</span></li>
+              <li><span>Midday Mulligan</span><span>$375</span></li>
+            </ul>
           </div>
           <div class="commit-box">
-            <div class="commit-term">4 Months</div>
-            <div class="commit-price">+ 50%</div>
-            <div class="commit-note">added to monthly price</div>
+            <div class="commit-term">4-Month</div>
+            <div class="commit-sub">commitment</div>
+            <ul class="commit-tiers">
+              <li><span>Breakfast Baller</span><span>$150</span></li>
+              <li><span>Small Bucket</span><span>$225</span></li>
+              <li><span>Ranger Rick</span><span>$300</span></li>
+              <li><span>From the Tips</span><span>$375</span></li>
+              <li><span>Stick</span><span>$450</span></li>
+              <li><span>Midday Mulligan</span><span>$450</span></li>
+            </ul>
           </div>
         </div>
       </div>
